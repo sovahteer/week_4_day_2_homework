@@ -11,10 +11,9 @@ get '/:player1_input/:player2_input' do
   erb :result
 end
 #
-get '/random/:player2_input' do
+get '/random/rock' do
   computer = ["rock", "paper", "scissors"].shuffle.first
-  p computer
-  @result =  Game.get_winner( computer, params[:player2_input])
+  @result =  Game.get_winner( computer, params[:player1_input])
   erb :result
 end
 
