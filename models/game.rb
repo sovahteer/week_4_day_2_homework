@@ -20,4 +20,19 @@ class Game
       return "Player 2 wins with Paper"
     end
   end
+  # def initialize(player1_input, player2_input)
+  #   @player1_input = player1_input
+  #   @player2_input = player2_input
+  #   @array = ["Rock", "Paper", "Scissors"]
+  # end
+  #
+  # def  ()
+  #
+  # end
+  #
+  # def draw()
+  #   if player1_input == player2_input
+  #     return "Its a draw!"
+  #   end
+  # end
 end

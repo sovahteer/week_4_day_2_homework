@@ -6,14 +6,14 @@ get '/welcome' do
   erb :welcome
 end
 
-get '/:player1_input/:player2_input' do
-  @result =  Game.get_winner( params[:player1_input], params[:player2_input])
-  erb :result
-end
+# get '/:player1_input/:player2_input' do
+#   @result =  Game.get_winner( params[:player1_input], params[:player2_input])
+#   erb :result
+# end
 #
-get '/random/rock' do
+get '/random/:player1_input' do
   computer = ["rock", "paper", "scissors"].shuffle.first
-  @result =  Game.get_winner( computer, params[:player1_input])
+  p @result =  Game.get_winner(params[:player1_input], computer)
   erb :result
 end
 
