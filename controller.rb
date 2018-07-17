@@ -3,8 +3,8 @@ require 'sinatra/contrib/all' if development?
 require_relative './models/game'
 
 get '/:player1_input/:player2_input' do
-  result =  Game.get_winner( params[:player1_input], params[:player2_input])
-  return result
+  @result =  Game.get_winner( params[:player1_input], params[:player2_input])
+  erb :result
 end
 #
 # get '/paper/rock' do
